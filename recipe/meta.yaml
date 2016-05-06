@@ -21,7 +21,7 @@ requirements:
     build:
         - python
         - setuptools
-        - numpy x.x
+        - numpy
         - scipy
         - biggus
         - cartopy
@@ -31,7 +31,7 @@ requirements:
         - mo_pack  # [not win]
     run:
         - python
-        - numpy x.x
+        - numpy
         - scipy
         - biggus
         - cartopy
