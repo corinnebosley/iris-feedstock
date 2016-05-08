@@ -15,7 +15,6 @@ source:
 
 build:
     number: 1
-    skip: True  # [osx]
 
 requirements:
     build:
@@ -45,7 +44,6 @@ requirements:
 test:
     imports:
         - iris
-        - iris.fileformats.pp_packing  # [not win]
         - iris.fileformats._pyke_rules.compiled_krb
 
 about:
