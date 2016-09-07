@@ -1,4 +1,4 @@
-{% set version = "1.9.2" %}
+{% set version = "1.10.0" %}
 
 package:
     name: iris
@@ -7,14 +7,14 @@ package:
 source:
     fn: iris-v{{ version }}.tar.gz
     url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-    sha256: 93f2cfe1c14aad293103727004863d09f21ea61de337aa73cb96a706df0b6133
+    sha256: e020b883d94b66e7931a05d211c1d539abb2674dcdeaa4a7da3d32ae4ad5c269
     patches:
         # Issue reported in https://github.com/SciTools/iris/issues/2004.
         # We work around this in build.sh.
         - no_compile_setup.patch  # [osx]
 
 build:
-    number: 1
+    number: 0
 
 requirements:
     build:
@@ -22,24 +22,27 @@ requirements:
         - setuptools
         - numpy
         - scipy
-        - biggus
-        - cartopy
+        - biggus >=0.14
+        - cartopy >=0.14
         - netcdf4
         - cf_units
         - pyke
         - mo_pack  # [not win]
+        - nc_time_axis
+        - iris-grib  # [not win and not py3k]
     run:
         - python
         - numpy
         - scipy
-        - biggus
-        - cartopy
+        - biggus >=0.14
+        - cartopy >=0.14
         - netcdf4
         - cf_units
         - pyke
         - mo_pack  # [not win]
         - matplotlib
-        - python-ecmwf_grib >=1.12.1  # [not win and not py3k]
+        - nc_time_axis
+        - iris-grib  # [not win and not py3k]
 
 test:
     imports:
