@@ -29,7 +29,7 @@ requirements:
     - pyke
     - mo_pack  # [not win]
     - nc_time_axis
-    - iris-grib  # [not win and not py3k]
+    - iris-grib  # [not (win or py3k)]
   run:
     - python
     - numpy
@@ -42,7 +42,7 @@ requirements:
     - mo_pack  # [not win]
     - matplotlib
     - nc_time_axis
-    - iris-grib  # [not win and not py3k]
+    - iris-grib  # [not (win or py3k)]
 
 test:
   imports:
