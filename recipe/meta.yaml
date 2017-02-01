@@ -1,4 +1,4 @@
-{% set version = "1.11.0" %}
+{% set version = "1.12.0" %}
 
 package:
   name: iris
@@ -7,7 +7,7 @@ package:
 source:
   fn: iris-v{{ version }}.tar.gz
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 95cd7381a994ec79a99b59ababe7c179c0416034cb450be62b83b1908a807316
+  sha256: 62e4cb152366e21aa845f1fbf0520abda39ccc7c5952e6a434eed5cd9f2cc140
   patches:
     # Issue reported in https://github.com/SciTools/iris/issues/2004.
     # We work around this in build.sh.
@@ -24,7 +24,8 @@ requirements:
     - scipy
     - biggus >=0.14
     - cartopy >=0.14
-    - netcdf4
+    # See https://github.com/SciTools/iris/issues/2322
+    - netcdf4 <=1.2.4
     - cf_units
     - pyke
     - mo_pack  # [not win]
@@ -36,7 +37,8 @@ requirements:
     - scipy
     - biggus >=0.14
     - cartopy >=0.14
-    - netcdf4
+    # See https://github.com/SciTools/iris/issues/2322
+    - netcdf4 <=1.2.4
     - cf_units
     - pyke
     - mo_pack  # [not win]
@@ -54,7 +56,7 @@ about:
   license: GPL3
   license_family: GPL3
   license_file: README.md
-  summary: Analyse and visualise meteorological and oceanographic data sets.
+  summary: 'Analyse and visualise meteorological and oceanographic data sets.'
 
 extra:
   recipe-maintainers:
