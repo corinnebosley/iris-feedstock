@@ -12,9 +12,10 @@ source:
     # Issue reported in https://github.com/SciTools/iris/issues/2004.
     # We work around this in build.sh.
     - no_compile_setup.patch  # [osx]
+    - one-dim-label.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,25 +23,22 @@ requirements:
     - setuptools
     - numpy
     - scipy
+    - six
     - biggus >=0.14
     - cartopy >=0.14
-    # See https://github.com/SciTools/iris/issues/2322
-    - netcdf4 <=1.2.4
     - cf_units
     - pyke
-    - mo_pack  # [not win]
-    - nc_time_axis
-    - iris-grib  # [not (win or py3k)]
   run:
     - python
     - numpy
     - scipy
+    - six
     - biggus >=0.14
     - cartopy >=0.14
-    # See https://github.com/SciTools/iris/issues/2322
-    - netcdf4 <=1.2.4
     - cf_units
     - pyke
+    # See https://github.com/SciTools/iris/issues/2322
+    - netcdf4 <=1.2.4
     - mo_pack  # [not win]
     - matplotlib
     - nc_time_axis
