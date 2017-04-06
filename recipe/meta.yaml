@@ -15,7 +15,7 @@ source:
     - one-dim-label.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -40,7 +40,7 @@ requirements:
     # See https://github.com/SciTools/iris/issues/2322
     - netcdf4 <=1.2.4
     - mo_pack  # [not win]
-    - matplotlib <2
+    - matplotlib
     - nc_time_axis
     - iris-grib  # [not (win or py3k)]
 
