@@ -12,10 +12,13 @@ source:
     # Issue reported in https://github.com/SciTools/iris/issues/2004.
     # We work around this in build.sh.
     - no_compile_setup.patch  # [osx]
+    # Already merged upstream. Drop when updating to the next version.
     - one-dim-label.patch
+    # See https://github.com/SciTools/iris/pull/2538
+    - pandas.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
