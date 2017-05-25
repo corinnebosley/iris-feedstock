@@ -1,4 +1,4 @@
-{% set version = "1.12.0" %}
+{% set version = "1.13.0" %}
 
 package:
   name: iris
@@ -7,18 +7,14 @@ package:
 source:
   fn: iris-v{{ version }}.tar.gz
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 62e4cb152366e21aa845f1fbf0520abda39ccc7c5952e6a434eed5cd9f2cc140
+  sha256: 2da0aa8c5d55afa8ea4fbbfed770135ddd036764b42ac31cf2d7ed206cc5961c
   patches:
     # Issue reported in https://github.com/SciTools/iris/issues/2004.
     # We work around this in build.sh.
     - no_compile_setup.patch  # [osx]
-    # Already merged upstream. Drop when updating to the next version.
-    - one-dim-label.patch
-    # See https://github.com/SciTools/iris/pull/2538
-    - pandas.patch
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
