@@ -19,24 +19,25 @@ requirements:
   build:
     - python
     - pip
-    - cartopy
+    - cartopy >=0.14
     - cf_units
-    - dask >=0.15.0
+    - dask >=0.15.3
     - numpy
     - pyke
     - scipy
     - six
   run:
     - python
-    - cartopy
+    - cartopy >=0.14
     - cf_units
-    - dask >=0.15.0
-    - matplotlib <1.9
+    - dask >=0.15.3
+    - matplotlib
     - netcdf4
     - numpy
     - pyke
     - scipy
     - six
+    - iris-grib  # [not (win or py3k)]
 
 test:
   imports:
