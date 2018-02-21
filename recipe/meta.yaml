@@ -7,10 +7,6 @@ package:
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
   sha256: 8605ab92c67d622e83fff6d7169fe154d9f8610edd8463b697b574884c158ba2
-  patches:
-    # Issue reported in https://github.com/SciTools/iris/issues/2004.
-    # We work around this in build.sh.
-    - no_compile_setup.patch  # [osx]
 
 build:
   number: 0
