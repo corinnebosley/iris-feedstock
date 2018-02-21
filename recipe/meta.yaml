@@ -1,45 +1,38 @@
-{% set version = "1.13.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: iris
   version: {{ version }}
 
 source:
-  fn: iris-v{{ version }}.tar.gz
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 2da0aa8c5d55afa8ea4fbbfed770135ddd036764b42ac31cf2d7ed206cc5961c
-  patches:
-    # Issue reported in https://github.com/SciTools/iris/issues/2004.
-    # We work around this in build.sh.
-    - no_compile_setup.patch  # [osx]
+  sha256: 8605ab92c67d622e83fff6d7169fe154d9f8610edd8463b697b574884c158ba2
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - python
-    - setuptools
-    - numpy
-    - scipy
-    - six
-    - biggus >=0.14
+    - pip
     - cartopy >=0.14
     - cf_units
+    - dask >=0.15.3
+    - numpy
     - pyke
+    - scipy
+    - six
   run:
     - python
-    - numpy
-    - scipy
-    - six
-    - biggus >=0.14
     - cartopy >=0.14
     - cf_units
-    - pyke
-    - netcdf4
-    - mo_pack  # [not win]
+    - dask >=0.15.3
     - matplotlib
-    - nc_time_axis
+    - netcdf4
+    - numpy
+    - pyke
+    - scipy
+    - six
     - iris-grib  # [not (win or py3k)]
 
 test:
