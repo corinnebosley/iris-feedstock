@@ -10,7 +10,7 @@ echo "udunits2_path = $PREFIX/lib/libudunits2${SHLIB_EXT}" >> $SITECFG
 
 rm -rf lib/iris/tests/results lib/iris/tests/*.npz
 
-python setup.py install --single-version-externally-managed --record record.txt
+$PYTHON -m pip install --no-deps --ignore-installed .
 
 
 # Without this line, the OS X build fails reproducibly with
