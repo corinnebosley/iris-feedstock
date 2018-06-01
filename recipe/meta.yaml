@@ -5,42 +5,42 @@ package:
   version: {{ version }}
 
 source:
-  fn: iris-v{{ version }}.tar.gz
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 2da0aa8c5d55afa8ea4fbbfed770135ddd036764b42ac31cf2d7ed206cc5961c
+  sha256: fadd2c79a63ef4ebbdcc95895a13eb7fb687c7f614f4cd895a54198859b26e4c
   patches:
     # Issue reported in https://github.com/SciTools/iris/issues/2004.
     # We work around this in build.sh.
     - no_compile_setup.patch  # [osx]
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - python
-    - setuptools
-    - numpy
-    - scipy
-    - six
+    - pip
     - biggus >=0.14
     - cartopy >=0.14
-    - cf_units
+    - cf_units <2
+    - netcdf4 <1.4
+    - numpy
     - pyke
+    - scipy
+    - six
   run:
     - python
     - numpy
-    - scipy
-    - six
     - biggus >=0.14
     - cartopy >=0.14
-    - cf_units
-    - pyke
-    - netcdf4
-    - mo_pack  # [not win]
-    - matplotlib
-    - nc_time_axis
+    - cf_units <2
     - iris-grib  # [not (win or py3k)]
+    - matplotlib
+    - mo_pack  # [not win]
+    - nc-time-axis
+    - netcdf4 <1.4
+    - pyke
+    - scipy
+    - six
 
 test:
   imports:
