@@ -16,9 +16,10 @@ requirements:
     - python
     - pip
     - cartopy >=0.14
-    - cf_units
+    - cf_units >=2
+    - cftime
     - dask >=0.17.1
-    - numpy
+    - numpy >=1.14
     - pyke
     - scipy
     - six
@@ -26,10 +27,11 @@ requirements:
     - python
     - cartopy >=0.14
     - cf_units
+    - cftime
     - dask >=0.17.1
-    - matplotlib
+    - matplotlib >=2
     - netcdf4 <1.4
-    - numpy
+    - numpy >=1.14
     - pyke
     - scipy
     - six
@@ -53,3 +55,4 @@ extra:
     - rhattersley
     - ocefpaf
     - bjlittle
+    - dkillick
