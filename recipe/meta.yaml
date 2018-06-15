@@ -9,7 +9,7 @@ source:
   sha256: 9e4cc7ebb41efcd67ece39c39d09fcacadc7ae9d2024fe954bb8149e1b9f7570
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -35,7 +35,6 @@ requirements:
     - pyke
     - scipy
     - six
-    - iris-grib  # [not (win or py3k)]
 
 test:
   imports:
@@ -56,3 +55,4 @@ extra:
     - ocefpaf
     - bjlittle
     - dkillick
+    - corinnebosley
