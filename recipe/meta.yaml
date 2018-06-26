@@ -9,7 +9,7 @@ source:
   sha256: 9e4cc7ebb41efcd67ece39c39d09fcacadc7ae9d2024fe954bb8149e1b9f7570
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -19,7 +19,7 @@ requirements:
     - cf_units >=2
     - cftime
     - dask >=0.17.1
-    - numpy >=1.14
+    - numpy
     - pyke
     - scipy
     - six
