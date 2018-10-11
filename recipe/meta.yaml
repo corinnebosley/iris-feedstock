@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: iris
@@ -9,7 +9,7 @@ source:
   sha256: 9e4cc7ebb41efcd67ece39c39d09fcacadc7ae9d2024fe954bb8149e1b9f7570
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -18,8 +18,8 @@ requirements:
     - cartopy >=0.14
     - cf_units >=2
     - cftime
-    - dask >=0.17.1
-    - numpy >=1.14
+    - dask
+    - numpy >=1.14, !=1.15.2
     - pyke
     - scipy
     - six
@@ -28,10 +28,10 @@ requirements:
     - cartopy >=0.14
     - cf_units >=2
     - cftime
-    - dask >=0.17.1
+    - dask
     - matplotlib >=2
     - netcdf4 >=1.4
-    - numpy >=1.14
+    - numpy >=1.14, !=1.15.2
     - pyke
     - scipy
     - six
